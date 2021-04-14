@@ -7,7 +7,7 @@
       Spring Security는 보안과 관련해서 체계적으로 많은 옵션을 제공해주기 때문에 개발자 입장에서는 일일이 보안 관련 로직을 작성하지 않아도 된다는 장점이 있다.
       이러한 Spring Security의 아키텍처는 아래와 같다.
 
-      ![Spring MVC](https://github.com/suhojang/SpringbootFilter/blob/master/mvc.png)
+      ![Spring Security](https://github.com/suhojang/SpringSecurity/blob/master/Spring_security.png)
 
 + Interceptor Method
     + PreHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
