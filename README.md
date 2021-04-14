@@ -14,6 +14,9 @@
   ![Spring Security_Module](https://github.com/suhojang/SpringSecurity/blob/master/Spring_security_module.png)
   + SecurityContextHolder: SecurityContextHolder는 보안 주체의 세부 정보를 포함하여 응용프로그램의 현재 보안 Context에 대한 세부 정보가 저장 된다.
     SecurityContextHolder는 기본적으로 SecurityContextHolder.MODE_INHERITABLETHREADLOCAL 방법과 SecurityContextHolder.MODE_THREADLOCAL 방법을 제공한다.
+  + SecurityContext: Authentication을 보관하는 역할을 하며 SecurityContext를 통해 Authentication 객체를 꺼내 올 수 있다.
+  + Authentication: Authentication은 현재 접근하는 주체의 정보와 권한을 담는 인터페이스이다. Authentication 객체는 Security Context에 저장되며, SecurityContextHolder를 통해 SecurityConext에 접근하고 SecurityContext를 통해 Authentication에 접근 할 수 있다.
+
 
 + Dependency
 ```xml
