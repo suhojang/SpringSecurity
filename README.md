@@ -20,24 +20,7 @@
   + Authentication: Authentication은 현재 접근하는 주체의 정보와 권한을 담는 인터페이스이다. Authentication 객체는 Security Context에 저장되며, SecurityContextHolder를 통해 SecurityConext에 접근하고 SecurityContext를 통해 Authentication에 접근 할 수 있다.
     
   + UsernamePasswordAuthenticationToken: UsernamePasswordAuthenticationToken은 Authentication을 implements한 AbstractAuthenticationToken의 하위 클래스로 User의 ID가 Principal 역할을 하고 Password가 Credential의 역할을 한다.
-    UsernamePasswordAuthenticationToken의 첫 번째 생성자는 인증 전의 객체를 생성하고, 두번째 생성자는 인증이 완료 된 객체를 생성한다.
-
-```java
-public UsernamePasswordAuthenticationToken(Object principal, Object credentials) {
-    super(null);
-    this.principal = principal;
-    this.credentials = credentials;
-    setAuthenticated(false);
-}
-
-public UsernamePasswordAuthenticationToken(Object principal, Object credentials,
-        Collection<? extends GrantedAuthority> authorities) {
-    super(authorities);
-    this.principal = principal;
-    this.credentials = credentials;
-    super.setAuthenticated(true); // must use super, as we override
-}
-```
+    
   + AuthenticationProvider: AuthenticationProvider에서는 실제 인증에 대한 부분을 처리하는데, 인증 전의 Authentication객체를 받아서 인증이 완료된 객체를 반환하는 역할을 한다. 아래와 같은 AuthenticationProvider 인터페이스를 구현해서 Custom한 AuthenticationProvider을 작성해서 AuthenticationManager에 등록하면 된다.
 
 
