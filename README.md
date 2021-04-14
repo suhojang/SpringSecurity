@@ -9,16 +9,9 @@
 
       ![Spring Security](https://github.com/suhojang/SpringSecurity/blob/master/Spring_security.png)
 
-+ Interceptor Method
-    + PreHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-        + Controller에 진입하기 전에 실행 됩니다. 반환 값이 true일 경우 Controller로 진입하고 false일 경우 진입하지 않습니다.
-          Object handler는 진입하려는 Controller의 Class 객체가 담겨 있습니다.
-    + PostHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)
-        + Controller 진입 후 View가 Rendering 되기 전에 수행 됩니다.
-    + afterComplete(HttpServletRequest request, HttpServletResponse response, Object object, Exception ex)
-        + Controller 진입 후 View가 Rendering 된 후에 실행 되는 Method 입니다.
-    + afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, Object h)
-        + 비동기 요청 시 PostHandle과 afterComplete가 수행되지 않고, afterConcurrentHandlingStarted가 수행 됩니다.
++ Spring Security 주요 모듈
+  ![Spring Security_Module](https://github.com/suhojang/SpringSecurity/blob/master/Spring_security_module.png)
+    
 
 + Dependency
 ```xml
