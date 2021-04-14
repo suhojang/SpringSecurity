@@ -38,6 +38,7 @@ public UsernamePasswordAuthenticationToken(Object principal, Object credentials,
     super.setAuthenticated(true); // must use super, as we override
 }
 ```
+  + AuthenticationProvider: AuthenticationProvider에서는 실제 인증에 대한 부분을 처리하는데, 인증 전의 Authentication객체를 받아서 인증이 완료된 객체를 반환하는 역할을 한다. 아래와 같은 AuthenticationProvider 인터페이스를 구현해서 Custom한 AuthenticationProvider을 작성해서 AuthenticationManager에 등록하면 된다.
 
 
 + Dependency
