@@ -54,7 +54,6 @@ public class UserController {
 
     @PostMapping(value = "/login")
     public String login(HttpServletRequest request, RedirectAttributes redirectAttributes, @ModelAttribute UserVO userVO){
-        log.info("@@@");
         String userPw = userVO.getUserPw();
         userVO = userService.findUserByUserEmail(userVO.getUserEmail());
         if(userVO == null || !passwordEncoder.matches(userPw, userVO.getUserPw())){
