@@ -280,3 +280,16 @@ com.jsh.security.example.exception.UserNotFoundException: null
 [2021-04-14 11:58:24:10653][http-nio-127.0.0.1-8081-exec-8] INFO  c.j.s.e.p.CustomAuthenticationProvider - 4. 전달 된 비밀번호와 조회 된 비밀번호를 비교
 [2021-04-14 11:58:24:10726][http-nio-127.0.0.1-8081-exec-8] INFO  c.j.s.e.p.CustomAuthenticationProvider - 5. UsernamePasswordAuthenticationToken 정보 Return
 [2021-04-14 11:58:24:10726][http-nio-127.0.0.1-8081-exec-8] INFO  c.j.s.e.h.CustomLoginSuccessHanlder - 6. /about page로 이동
+[2021-04-14 15:06:25:817][main] INFO  c.jsh.security.example.Application - Starting Application using Java 1.8.0_191 on DESKTOP-7ECUB86 with PID 39872 (D:\Documents\GitHub\security.example\build\classes\java\main started by DEV_PC in D:\Documents\GitHub\security.example)
+[2021-04-14 15:06:25:820][main] INFO  c.jsh.security.example.Application - No active profile set, falling back to default profiles: default
+[2021-04-14 15:06:28:4466][main] INFO  c.j.s.e.config.WebSecurityConfig - 1. Web Security Provider 설정
+[2021-04-14 15:06:28:4475][main] INFO  c.j.s.e.config.WebSecurityConfig - 2. AuthenticationFilter 설정
+[2021-04-14 15:06:29:4606][main] INFO  c.j.s.e.config.WebSecurityConfig - 3. Login Authorization 설정
+[2021-04-14 15:06:29:4614][main] INFO  c.j.s.e.config.WebSecurityConfig - 4. 정적 자원에 대한 Security 설정을 적용하지 않음
+[2021-04-14 15:06:29:5078][main] INFO  c.jsh.security.example.Application - Started Application in 4.857 seconds (JVM running for 5.326)
+[2021-04-14 15:06:35:11363][http-nio-127.0.0.1-8081-exec-7] INFO  c.j.s.e.f.CustomAuthenticationFilter - 1. authenticationToken 생성 : UsernamePasswordAuthenticationToken [Principal=user@naver.com, Credentials=[PROTECTED], Authenticated=false, Details=null, Granted Authorities=[]]
+[2021-04-14 15:06:35:11364][http-nio-127.0.0.1-8081-exec-7] INFO  c.j.s.e.f.CustomAuthenticationFilter - 2. 생성 된 authenticationToken 주입
+[2021-04-14 15:06:35:11364][http-nio-127.0.0.1-8081-exec-7] INFO  c.j.s.e.s.UserDetailsServiceImpl - 3. User 정보 조회 후 UserDetailsVO 로 형변환
+[2021-04-14 15:06:36:11516][http-nio-127.0.0.1-8081-exec-7] INFO  c.j.s.e.p.CustomAuthenticationProvider - 4. 전달 된 비밀번호와 조회 된 비밀번호를 비교
+[2021-04-14 15:06:36:11586][http-nio-127.0.0.1-8081-exec-7] INFO  c.j.s.e.p.CustomAuthenticationProvider - 5. UsernamePasswordAuthenticationToken 정보 Return
+[2021-04-14 15:06:36:11587][http-nio-127.0.0.1-8081-exec-7] INFO  c.j.s.e.h.CustomLoginSuccessHanlder - 6. /about page로 이동

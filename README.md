@@ -1,5 +1,19 @@
-#### Spring Security
-+ What is Spring Security?
+### Spring Security
+
+- Spring Security
+  * [Spring Security](#SpringSecurity)
+  * [Spring Security Module](#Module)
+  * 사용 가이드  
+    + [Dependency](#Dependency), [Gradle](#Gradle)
+    + [WebSecurity](#WebSecurity생성)
+    + [AuthenticateFilter](#AuthenticateFilter생성)
+    + [AuthenticationProvider](#AuthenticationProvider생성)
+    + [UserDetailsService](#UserDetailsService생성)
+    + [UserRepository](#UserRepository생성)
+    + [UserEntity](#UserEntity생성)
+    + [UserDetails](#UserDetails생성)
+
+#### SpringSecurity
     + Spring Security는 Spring 기반의 Application의 보안(인증과 권한,인가 등)을 담당하는 Spring 하위 Framewrork이다.
       Spring Security는 '인증'과 '권한'에 대한 부분을 Filter 흐름에 따라 처리하고 있다.
       Filter는 Dispatcher Servlet으로 가기 전에 적용되므로 가장 먼저 URL 요청을 받지만 Interceptor는 Dispatcher와 Contoller사이에
@@ -9,7 +23,7 @@
 
       ![Spring Security](https://github.com/suhojang/SpringSecurity/blob/master/Spring_security.png)
 
-+ Spring Security 주요 모듈
+#### Module
   
   ![Spring Security_Module](https://github.com/suhojang/SpringSecurity/blob/master/Spring_security_module.png)
   + SecurityContextHolder: 보안 주체의 세부 정보를 포함하여 응용프로그램의 현재 보안 Context에 대한 세부 정보가 저장 된다.
@@ -33,7 +47,7 @@
     
   + GrantedAuthority: GrantAuthority는 현재 사용자(principal)가 가지고 있는 권한을 의미한다. ROLE_ADMIN나 ROLE_USER와 같이 ROLE_*의 형태로 사용하며, 보통 "roles" 이라고 한다. GrantedAuthority 객체는 UserDetailsService에 의해 불러올 수 있고, 특정 자원에 대한 권한이 있는지를 검사하여 접근 허용 여부를 결정한다.
 
-+ Dependency
+#### Dependency
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -85,7 +99,7 @@
     <scope>test</scope>
 </dependency>
   ```
-+ Gradle
+#### Gradle
 ```groovy
 implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 implementation 'org.springframework.boot:spring-boot-starter-security'
@@ -99,7 +113,7 @@ testImplementation 'org.springframework.boot:spring-boot-starter-test'
 testImplementation 'org.springframework.security:spring-security-test'
 ```
 
-+ WebSecurity 생성
+#### WebSecurity생성
 ```java
 package com.jsh.security.example.config;
 
@@ -176,7 +190,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-+ Authenticate Filter 생성
+#### AuthenticateFilter생성
 ```java
 package com.jsh.security.example.filter;
 
@@ -209,7 +223,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
 }
 ```
 
-+ AuthenticationProvider 생성
+#### AuthenticationProvider생성
 ```java
 package com.jsh.security.example.provider;
 
@@ -256,7 +270,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 }
 ```
 
-+ UserDetailsService 생성
+#### UserDetailsService생성
 ```java
 package com.jsh.security.example.service;
 
@@ -290,7 +304,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 }
 ```
 
-+ UserRepository 생성
+#### UserRepository생성
 ```java
 package com.jsh.security.example.repository;
 
@@ -308,7 +322,7 @@ public interface UserRepository extends JpaRepository <UserVO, Long> {
 }
 ```
 
-+ User Entity 생성
+#### UserEntity생성
 ```java
 package com.jsh.security.example.vo;
 
@@ -348,7 +362,7 @@ public class UserVO extends CommonVO implements Serializable {
 }
 ```
 
-+ UserDetails 생성
+#### UserDetails생성
 ```java
 package com.jsh.security.example.vo;
 
